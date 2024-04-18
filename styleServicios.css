@@ -1,0 +1,68 @@
+h2 {
+  font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    font-size: 50px;
+    background-color: hsl(195, 64%, 34%); 
+}
+
+.seleccion {
+  margin-top: 20px;
+  font-size: 1.1rem;
+}
+
+.selector1 {
+  width: 150px;
+  margin-right: 20px;
+}
+
+.selector2 {
+  width: 100px;
+}
+
+.button {
+  background-color: white;
+  border-radius: 10px;
+  margin-left: 20px;
+}
+
+#cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    margin-top: 40px;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+  .card {
+    align-items: center; /* Alinear elementos verticalmente */
+    width: 300px; /* Ancho de la tarjeta */
+    border-radius: 20px; /* Bordes redondeados */
+    padding: 20px; /* Espacio interno */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    margin-bottom: 50px; /* Margen inferior para separar las tarjetas */
+    background-color: rgba(255, 255, 255, 0.767);
+}
+
+.card:hover {
+    background-color: rgb(24, 214, 189);
+		color: #fff;
+		scale: 1.1;
+		transition: scale 1s;
+}
+  
+.card h2 {
+    font-size: 30px;
+    margin-top: 0%;
+    text-align: center;
+}
+
+.card .fecha {
+  font-size: 20px;
+}
+
+.card .temp-img {
+  width: 80px;
+}
