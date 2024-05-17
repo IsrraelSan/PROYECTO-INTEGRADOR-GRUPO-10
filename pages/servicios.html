@@ -36,81 +36,91 @@
 		<title>Consulta de Clima</title>
 	</head>
 
-	<body onload="getWeather()">
-		<header>
-			<section class="titleBar">
-				<div class="logo">
-					<a href="../index.html"
-						><img
-							src="../media/images/logo.png"
-							alt="Logo de la página web"
-					/></a>
-				</div>
-				<h1 class="title">CHARLY Tours</h1>
-			</section>
+<body>
+    <header>
+        <section class="titleBar">
+            <div class="logo">
+                <a href="index.html"
+                    ><img src="../media/images/logo.png" alt="Logo de la página web"
+                /></a>
+            </div>
+            <h1 class="title">CHARLY Tours</h1>
+        </section>
 
-			<!--navbar-->
-			<nav class="navbar navbar-expand-md navbar-light">
-				<div class="container-fluid">
-					<button
-						class="navbar-toggler"
-						type="button"
-						data-bs-toggle="collapse"
-						data-bs-target="#navbar-toggler"
-						aria-expanded="false"
-						aria-label="Toggle navigation"
-					>
-						<span class="navbar-toggler-icon"></span>
-					</button>
-					<div class="collapse navbar-collapse" id="navbar-toggler">
-						<!-- links a páginas -->
-						<ul class="navbar-nav d-flex justify-content-center">
-							<li class="nav-item">
-								<a class="nav-link" href="../index.html">Inicio</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="./consultas.html"
-									>Dejanos tu consulta</a
-								>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="./quienes-somos.html"
-									>Quienes somos</a
-								>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="./servicios.html"
-									>Servicios</a
-								>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#contacto">Contacto</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</nav>
-		</header>
+        <!--navbar-->
+        <nav class="navbar navbar-expand-md navbar-light">
+            <div class="container-fluid">
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbar-toggler"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbar-toggler">
+                    <!-- links a páginas -->
+                    <ul class="navbar-nav d-flex justify-content-center">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./consultas.html"
+                                >Dejanos tu consulta</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./quienes-somos.html"
+                                >Quienes somos</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./servicios.html">Servicios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contacto">Contacto</a>
+                        </li>
+                        
+                    </ul>
 
-		<h2>Consulta el clima de la Ciudad destino</h2>
-
-		<div class="seleccion">
-			<label for="city"> <b>Selecciona una ciudad:</b></label>
-
-			<select id="city" class="selector1" onchange="getWeather()">
-				<option value="Buenos Aires">Buenos Aires</option>
-				<option value="Mendoza">Mendoza</option>
-				<option value="Cordoba">Cordoba</option>
-				<option value="Ushuaia">Tierra del Fuego</option>
-				<option value="Misiones">Misiones</option>
-				<option value="Salta">Salta</option>
-				<option value="Comodoro Rivadavia">Chubut</option>
-				<option value="Santa Cruz">Santa Cruz</option>
-				<option value="Entre Rios">Entre Rios</option>
-				<option value="San Luis">San Luis</option>
-				<option value="Neuquen">Neuquén</option>
-				<option value="Rio Negro">Río Negro</option>
-			</select>
+                    <!--formulario de registro-->
+                    <form class="form">
+                        <label class="formLabel" for="username">Registrate:</label>
+                        <input
+                            class="formInput"
+                            type="text"
+                            name="username"
+                            id="username"
+                        />
+                        <button class="formButton" type="submit">Guardar</button>
+                        <button class="formButton" type="button" id="borrarConfig">
+                            Borrar
+                        </button>
+                        <!-- Aqui se renderiza un saludo personalizado al usuario luego del registro-->
+                        <h5 id="saludarUsuario"></h5>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+        
+    <h2>Consulta el clima de la Ciudad destino</h2>
+    
+    <div class="seleccion">
+    <label for="city" > <b>Selecciona una ciudad:</b></label>
+    
+    <select id="city" class="selector1">
+        <option value="Buenos Aires">Buenos Aires</option>
+        <option value="Mendoza">Mendoza</option>
+        <option value="Cordoba">Cordoba</option>
+        <option value="Ushuaia">Tierra del Fuego</option>
+        <option value="Misiones">Misiones</option>
+        <option value="Salta">Salta</option>
+        <option value="Comodoro Rivadavia">Chubut</option>
+        <option value="Santa Cruz">Santa Cruz</option>
+    </select>
 
 			<label for="start_date"><b>Desde:</b></label>
 			<input type="text" id="start_date" class="selector2" />
@@ -118,10 +128,8 @@
 			<label for="end_date"><b>Hasta:</b></label>
 			<input type="text" id="end_date" class="selector2" />
 
-			<button onclick="getWeatherForecast()" class="button">
-				Consultar
-			</button>
-		</div>
+    <button onclick="getWeather(), getWeatherForecast()" class="button">Consultar</button>
+</div>
 
 		<div id="cards"></div>
 		<div id="weather-info"></div>
